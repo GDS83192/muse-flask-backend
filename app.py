@@ -23,7 +23,7 @@ def after_request(response):
     g.db.close()
     return response
 
-# CORS(song, origins=['http://localhost:3000', "*"], supports_credentials=True) # adding this line
+CORS(song, origins=['http://localhost:3000', "*"], supports_credentials=True) # adding this line
 
 app.register_blueprint(song, url_prefix='/api/v1/songs') # adding this line
 
